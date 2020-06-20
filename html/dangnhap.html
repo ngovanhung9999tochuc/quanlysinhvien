@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dangnhap.css" />
+    <title>Đăng Nhập</title>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="content-login">
+        <div class="top">hung</div>
+        <div class="form-login">
+
+            <h3>Đăng Nhập</h3>
+            <form method="POST" action="">
+                <div class="row">
+                    <label for="user">TÀI KHOẢN</label>
+                    <input type="text" id="user" name="user" value="" />
+                    <p class="error"></p>
+                </div>
+                <div class="row">
+                    <label for="pass">MẬT KHẨU</label>
+                    <input type="password" id="pass" name="pass" value="" />
+                    <p class="error"></p>
+                </div>
+                <div class="row">
+                    <input type="submit" name="dangnhap" value="Gửi" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
