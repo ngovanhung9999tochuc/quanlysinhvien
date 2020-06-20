@@ -1,18 +1,16 @@
 <?php
+class DB
+{
+    protected $conn;
+    protected $serverName = "localhost";
+    protected $userName = "root";
+    protected $password = "";
+    protected $dbName = "quanlycuahangdientu";
 
-    class db{
-        public $con;
-        protected $severname = "localhost";
-        protected $username = "root";
-        protected $password = "";
-        protected $dbname = "tintuc";
-
-        public function __construct()
-        {
-            $this->con = mysqli_connect($this->severname, $this->username, $this->password);
-            mysqli_select_db($this->con, $this->dbname);
-            mysqli_query($this->con, "SET NAME 'utf8'");
-        }
-    }
-
-?>
+    function __construct()
+    {
+        $this->conn=mysqli_connect($this->serverName,$this->userName,$this->password);
+        mysqli_select_db($this->conn,$this->dbName);
+        mysqli_query($this->conn,"SET NAME 'utf8'");
+     }
+}
