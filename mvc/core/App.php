@@ -6,8 +6,11 @@ class App
    protected $params = [];
    function __construct()
    {
-      $arr = $this->UrlProcess();
       
+      $arr = $this->UrlProcess();
+      if(empty($arr)){
+         $arr = array("Home","SayHi");
+      }
       /*echo '<pre>';
       print_r($_POST);
       echo '</pre>';*/
