@@ -11,7 +11,7 @@ class DaoDangNhapGiangVien extends DB
                 if ($pass == $row['matkhau']) {
                     $_SESSION['user'] = $user;
                     $_SESSION['magv'] = $row['magv'];
-                    header("Location: http://localhost/quanlysinhvien/HeThongGiangVien");
+                    header("Location: ".$this->getLocalhost()."HeThongGiangVien");
                     break;
                 } else {
                     $result = 'Mật khẩu sai';

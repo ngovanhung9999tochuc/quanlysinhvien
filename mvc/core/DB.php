@@ -13,4 +13,8 @@ class DB
         mysqli_select_db($this->conn,$this->dbName);
         mysqli_query($this->conn,"SET NAME 'utf8'");
      }
+     public function getLocalhost()
+    {
+       return "http://localhost/quanlysinhvien/";
+    }
 }

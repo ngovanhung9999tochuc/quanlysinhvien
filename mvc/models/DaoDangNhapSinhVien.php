@@ -11,7 +11,7 @@ class DaoDangNhapSinhVien extends DB
                 if ($pass == $row['matkhau']) {
                     $_SESSION['user'] = $user;
                     $_SESSION['magv'] = $row['magv'];
-                    header("Location: http://localhost/quanlysinhvien/HeThongSinhVien");
+                    header("Location: ".$this->getLocalhost()."HeThongSinhVien");
                     break;
                 } else {
                     $result = 'Mật khẩu sai';
@@ -23,5 +23,13 @@ class DaoDangNhapSinhVien extends DB
             $result = 'Tài khoản không tồn tại';
         }
         return $result;
+    }
+    public function xoaUserSinhVien($masv){
+        $sql = "DELETE FROM usersinhvien WHERE masv='".$masv."'";
+        if (mysqli_query($this->conn, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

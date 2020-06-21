@@ -29,8 +29,8 @@
             <td>'.$data["arrSinhVien"][$i]["sdt"].'</td>
             <td>'.$data["arrSinhVien"][$i]["malop"].'</td>
             <td>
-            <a href="" ><button class="btn">Xóa</button></a>
-            <a href="" ><button class="btn">Sửa</button></a>
+            <a href="SinhVien/XoaSinhVien/'.$data["arrSinhVien"][$i]["masv"].'/'.$data["arrSinhVien"][$i]["malop"].'" ><button class="btn">Xóa</button></a>
+            <a href="SinhVien/SuaSinhVien/'.$data["arrSinhVien"][$i]["masv"].'" ><button class="btn">Sửa</button></a>
             </td>
         </tr>';
         }

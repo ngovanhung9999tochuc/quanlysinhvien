@@ -19,4 +19,8 @@ class Controller
         $result = substr($arrCharacter, 0, $lenght);
         return $result;
     }
+    public function getLocalhost()
+    {
+       return "http://localhost/quanlysinhvien/";
+    }
 }

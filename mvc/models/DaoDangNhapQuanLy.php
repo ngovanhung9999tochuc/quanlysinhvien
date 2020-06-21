@@ -11,7 +11,7 @@ class DaoDangNhapQuanLy extends DB
                 if ($pass == $row['matkhau']) {
                     $_SESSION['user'] = $user;
                     $_SESSION['magv'] = $row['magv'];
-                    header("Location: http://localhost/quanlysinhvien/HeThongQuanTri");
+                    header("Location: ".$this->getLocalhost()."HeThongQuanTri");
                     break;
                 } else {
                     $result = 'Mật khẩu sai';
