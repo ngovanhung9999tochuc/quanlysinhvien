@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <base href="http://localhost/quanlysinhvien/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="trangquanly.css" rel="stylesheet" type="text/css" />
+    <link href="public/css/QuanTri.css" rel="stylesheet" type="text/css" />
+    <link href="public/css/<?php echo $data["css"]?>.css" rel="stylesheet" type="text/css" />
     <title>Quản Trị</title>
 </head>
 
@@ -12,7 +14,7 @@
     <div>
         <div class="main">
             <header class="clearfix">
-                <h2 class="title-page">Hệ Thống Quản Lý</h2> <span class="user"><b class="user-icon">@</b><b class="name-user">ngô văn hùng</b></span>
+                <a href="HeThongQuanTri"><h2 class="title-page">Hệ Thống Quản Lý</h2></a> <span class="user"><b class="user-icon">@</b><b class="name-user">ngô văn hùng</b></span>
             </header>
         </div>
         <section class="content clearfix">
@@ -20,14 +22,14 @@
                 <nav>
                     <ul class="nav-menu">
                         <li id="btnNguoidung">
-                            <span>Hồ sơ người dùng</span>
+                            <span>Hồ Sơ Người Dùng</span>
                         </li>
 
                         <li id="btnGiangVien">
-                            <span> Hồ sơ giảng viên</span>
+                            <span>Hồ Sơ Giảng Viên</span>
                         </li>
                         <li id="btnSinhVien">
-                            <span>Hồ sơ sinh viên</span>
+                            <span>Hồ Sơ Sinh Viên</span>
                         </li>
                         <ul class="menu-child" id="menu-child-sinhvien">
                         </ul>
@@ -49,21 +51,21 @@
                         <li class="bar">
                             hồ sơ giảng viên
                         </li>
-                        <li class="bar">
-                            hồ sơ sinh viên
-                        </li>
+                        <a href="SinhVien">
+                            <li class="bar">
+                                hồ sơ sinh viên
+                            </li>
+                        </a>
                         <li class="bar">
                             điểm
                         </li>
                     </ul>
                 </div>
-                <div class="content-main">
-                    nôi dùng
-                </div>
+                <?php require_once "./mvc/views/pages/" . $data["page"] . ".php"; ?>   
             </div>
         </section>
     </div>
-    <script src="trangquanly.js"></script>
+    <script src="public/js/QuanTri.js"></script>
 </body>
 
 </html>

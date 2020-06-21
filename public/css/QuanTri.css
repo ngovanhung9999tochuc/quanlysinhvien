@@ -96,6 +96,7 @@ header .user .user-icon {
     height: 2vw;
     padding-left: 2vw;
     color: black;
+    line-height: 1.5em;
 }
 
 .content .nav-admin .nav-menu>.menu-child li:hover {

@@ -3,6 +3,6 @@ class HeThongQuanTri extends Controller
 {
     public function SayHi()
     {
-       echo "quan tri";
+        $this->view("LayoutQuanTri", ["page" => "QuanTri","css"=>""]);
     }
 }
