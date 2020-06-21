@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/css/QuanTri.css" rel="stylesheet" type="text/css" />
     <link href="public/css/<?php echo $data["css"]?>.css" rel="stylesheet" type="text/css" />
+   <!-- <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>-->
     <title>Quản Trị</title>
 </head>
 
@@ -22,19 +27,19 @@
                 <nav>
                     <ul class="nav-menu">
                         <li id="btnNguoidung">
-                            <span>Hồ Sơ Người Dùng</span>
+                            <span>HỒ SƠ NGƯỜI DÙNG</span>
                         </li>
 
                         <li id="btnGiangVien">
-                            <span>Hồ Sơ Giảng Viên</span>
+                            <span>HỒ SƠ NGƯỜI DÙNG</span>
                         </li>
                         <li id="btnSinhVien">
-                            <span>Hồ Sơ Sinh Viên</span>
+                            <span>HỒ SƠ SINH VIÊN</span>
                         </li>
                         <ul class="menu-child" id="menu-child-sinhvien">
                         </ul>
                         <li id="btnDiem">
-                            <span> Điểm</span>
+                            <span>ĐIỂM</span>
                         </li>
 
                     </ul>
@@ -46,18 +51,18 @@
 
                     <ul>
                         <li class="bar">
-                            hồ sơ người dùng
+                            HỒ SƠ NGƯỜI DÙNG
                         </li>
                         <li class="bar">
-                            hồ sơ giảng viên
+                            HỒ SƠ GIẢNG VIÊN
                         </li>
                         <a href="SinhVien">
                             <li class="bar">
-                                hồ sơ sinh viên
+                               HỒ SƠ SINH VIÊN
                             </li>
                         </a>
                         <li class="bar">
-                            điểm
+                            ĐIỂM
                         </li>
                     </ul>
                 </div>

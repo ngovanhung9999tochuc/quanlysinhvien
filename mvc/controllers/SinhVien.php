@@ -44,19 +44,37 @@ class SinhVien extends Controller
     public function SuaSinhVien($masv)
     {
         $daoSinhVien = $this->model("DaoSinhVien");
-        $res="";
+        $res = "";
         if (isset($_POST['sua'])) {
-            if (isset($_POST['masv']) && isset($_POST['tensv']) && isset($_POST['ngaysinh'])&& isset($_POST['gioitinh'])&& isset($_POST['quequan'])&& isset($_POST['sdt'])&& isset($_POST['malop'])) {
-                if($daoSinhVien->suaSinhVien($_POST['masv'],$_POST['tensv'],$_POST['ngaysinh'],$_POST['gioitinh'],$_POST['quequan'],$_POST['sdt'],$_POST['malop'])){
+            if (isset($_POST['masv']) && isset($_POST['tensv']) && isset($_POST['ngaysinh']) && isset($_POST['gioitinh']) && isset($_POST['quequan']) && isset($_POST['sdt']) && isset($_POST['malop'])) {
+                if ($daoSinhVien->suaSinhVien($_POST['masv'], $_POST['tensv'], $_POST['ngaysinh'], $_POST['gioitinh'], $_POST['quequan'], $_POST['sdt'], $_POST['malop'])) {
                     header("Location: " . $this->getLocalhost() . "SinhVien/LayDanhSachSinhVien/" . $_POST['malop'] . "");
-                }else{
-                    $res="Lỗi bạn nên kiểm tra mã lớp";
+                } else {
+                    $res = "Lỗi ! bạn nên kiểm tra mã lớp";
                 }
             }
         }
 
-        
+
         $arrSinhVien = $daoSinhVien->laySinhVienTheoMaSV($masv);
-        $this->view("LayoutQuanTri", ["page" => "XemSuaSV", "css" => "XemSuaSV", "arrSinhVien" => $arrSinhVien,"res"=>$res]);
+        $this->view("LayoutQuanTri", ["page" => "XemSuaSV", "css" => "XemSuaSV", "arrSinhVien" => $arrSinhVien, "res" => $res]);
+    }
+    public function ThemSinhVien()
+    {
+        $daoSinhVien = $this->model("DaoSinhVien");
+        $masv = "SV" . $this->randomString(8);
+        $res = "";
+        $arrPost=$_POST;
+        if (isset($_POST['them'])) {
+            if (isset($_POST['tensv']) && isset($_POST['ngaysinh']) && isset($_POST['gioitinh']) && isset($_POST['quequan']) && isset($_POST['sdt']) && isset($_POST['malop'])) {
+                if ($daoSinhVien->themSinhVien($masv, $_POST['tensv'], $_POST['ngaysinh'], $_POST['gioitinh'], $_POST['quequan'], $_POST['sdt'], $_POST['malop'])) {
+                    $res = "Thêm sinh viên thành công";
+                    $arrPost=[];
+                } else {
+                    $res = "Lỗi ! bạn nên kiểm tra mã lớp";
+                }
+            }
+        }
+        $this->view("LayoutQuanTri", ["page" => "XemThemSV", "css" => "XemThemSV","res"=>$res,"arrPost"=>$arrPost]);
     }
 }
