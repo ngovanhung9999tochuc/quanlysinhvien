@@ -4,8 +4,8 @@
 
 .content-main ul li {
     display: inline-block;
-    width: 25%;
-    background-color: coral;
+    width: 15%;
+    background-color: yellow;
     height: 3vw;
     margin-right: 2vw;
     margin-bottom: 2vw;
@@ -19,5 +19,5 @@
 
 .content-main ul li:hover {
     background-color: white;
-    border-color: coral;
+    border-color: yellow;
 }

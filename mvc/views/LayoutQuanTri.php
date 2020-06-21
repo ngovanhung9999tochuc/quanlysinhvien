@@ -41,7 +41,7 @@
                 </nav>
             </div>
             <div class="content-admin">
-                <h3>Quản Trị</h3>
+                <h3 style="background-color: rgb(172, 177, 182);">Quản Trị</h3>
                 <div class="transfer-bar-nav clearfix">
 
                     <ul>
