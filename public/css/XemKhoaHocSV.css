@@ -2,6 +2,11 @@
     background-color: rgb(172, 177, 182);
 }
 
+.content-main h2 {
+    margin: 1.5vw 0vw;
+    text-align: center;
+}
+
 .content-main ul li {
     display: inline-block;
     width: 15%;

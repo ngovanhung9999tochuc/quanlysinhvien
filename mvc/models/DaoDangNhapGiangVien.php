@@ -24,4 +24,12 @@ class DaoDangNhapGiangVien extends DB
         }
         return $result;
     }
+    public function xoaUserGiangVien($magv){
+        $sql = "DELETE FROM usergiangvien WHERE magv='".$magv."'";
+        if (mysqli_query($this->conn, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

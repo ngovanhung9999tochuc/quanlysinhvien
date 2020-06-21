@@ -41,7 +41,6 @@ class DaoSinhVien extends DB
         } catch (Exception $e) {
             return false;
         }
-        
     }
     public function themSinhVien($masv,$tensv,$ngaysinh,$gioitinh,$quequan,$sdt,$malop){
         $sql = "INSERT INTO sinhvien VALUES ('$masv','$tensv','$ngaysinh',$gioitinh,'$quequan','$sdt','$malop')";

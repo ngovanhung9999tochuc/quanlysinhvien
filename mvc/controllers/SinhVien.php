@@ -21,6 +21,7 @@ class SinhVien extends Controller
         $arrLop = $daoLop->layLopTheoKhoaVaKhoaHoc($makhoahoc, $makhoa);
         $this->view("LayoutQuanTri", ["page" => "XemLopSV", "css" => "XemLopSV", "arrLop" => $arrLop]);
     }
+    
     public function LayDanhSachSinhVien($malop)
     {
         $daoSinhVien = $this->model("DaoSinhVien");
@@ -41,6 +42,7 @@ class SinhVien extends Controller
             }
         }
     }
+
     public function SuaSinhVien($masv)
     {
         $daoSinhVien = $this->model("DaoSinhVien");
@@ -54,11 +56,10 @@ class SinhVien extends Controller
                 }
             }
         }
-
-
         $arrSinhVien = $daoSinhVien->laySinhVienTheoMaSV($masv);
         $this->view("LayoutQuanTri", ["page" => "XemSuaSV", "css" => "XemSuaSV", "arrSinhVien" => $arrSinhVien, "res" => $res]);
     }
+
     public function ThemSinhVien()
     {
         $daoSinhVien = $this->model("DaoSinhVien");

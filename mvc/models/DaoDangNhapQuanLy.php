@@ -24,4 +24,13 @@ class DaoDangNhapQuanLy extends DB
         }
         return $result;
     }
+
+    public function xoaUserQuanLy($magv){
+        $sql = "DELETE FROM userquanly WHERE magv='".$magv."'";
+        if (mysqli_query($this->conn, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
