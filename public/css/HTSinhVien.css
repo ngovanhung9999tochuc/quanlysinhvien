@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+}
+
+header {
+    background-color: #09A770;
+    height: 4vw;
+}
+
+header .title-page {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    background-color: #087c53;
+    line-height: 2em;
+    height: 4vw;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+}
+
+header .user {
+    float: right;
+    margin-right: 2vw;
+    line-height: 3em;
+}
+
+header .user .user-icon {
+    margin-right: 1vw;
+}
+
+.content .nav-admin {
+    width: 20%;
+    float: left;
+    height: 100vw;
+    background-color: rgb(51, 51, 51);
+}
+
+.content .content-admin {
+    width: 80%;
+    float: left;
+}
+
+
+/*menu chinh*/
+
+.content .nav-admin .nav-menu a>li {
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 4vw;
+    line-height: 2.5em;
+}
+
+.content .nav-admin .nav-menu a>li>span {
+    margin-left: 1vw;
+    color: white;
+}
+
+.content .nav-admin .nav-menu a>li:hover {
+    background-color: black;
+}
+
+.content .nav-admin .nav-menu a>.menu-child {
+    background-color: white;
+}
+
+.content .nav-admin .nav-menu>.menu-child li {
+    font-size: 1em;
+    font-weight: bold;
+    height: 2vw;
+    padding-left: 2vw;
+    color: black;
+    line-height: 1.5em;
+}
+
+.content .nav-admin .nav-menu>.menu-child li:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/*menu con*/
+
+
+/*noi dung chinh*/
+
+.content .content-admin h3 {
+    margin: 1vw 0vw;
+}
+
+.content .content-admin .transfer-bar-nav ul li {
+    background-color: aqua;
+    float: left;
+    width: 22%;
+    height: 6vw;
+    margin-right: 4%;
+    border-radius: 5px;
+    line-height: 2em;
+}
+
+.content .content-admin .transfer-bar-nav ul li:nth-child(4) {
+    float: right;
+    margin-right: 0px;
+}
+#li-cuoi{
+    float: right;
+    margin-right: 0px;
+}
+.content .content-admin .transfer-bar-nav {
+    margin-left: 0.3%;
+    margin-bottom: 1vw;
+}
+
+.content .content-admin .transfer-bar-nav ul .bar {
+    font-weight: bold;
+    color: rgb(58, 54, 50);
+    text-align: center;
+    line-height: 3em;
+}
