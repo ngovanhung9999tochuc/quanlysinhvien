@@ -31,6 +31,8 @@
                         <li id="btnNguoidung">
                             <span>HỒ SƠ NGƯỜI DÙNG</span>
                         </li>
+                        <ul class="menu-child" id="menu-child-nguoidung">
+                        </ul>
                         <li id="btnGiangVien">
                             <span>HỒ SƠ GIẢNG VIÊN</span>
                         </li>
@@ -52,9 +54,11 @@
                 <h3 style="background-color: rgb(172, 177, 182);">Quản Trị</h3>
                 <div class="transfer-bar-nav clearfix">
                     <ul>
-                        <li class="bar">
-                            HỒ SƠ NGƯỜI DÙNG
-                        </li>
+                        <a href="NguoiDung">
+                            <li class="bar">
+                                HỒ SƠ NGƯỜI DÙNG
+                            </li>
+                        </a>
                         <a href="GiangVien">
                             <li class="bar">
                                 HỒ SƠ GIẢNG VIÊN

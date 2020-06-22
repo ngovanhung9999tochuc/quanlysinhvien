@@ -14,8 +14,15 @@
     const btnGiangVien = document.getElementById("btnGiangVien");
     const menuChildGiangVien = document.getElementById("menu-child-giangvien");
     btnGiangVien.addEventListener('click', function() {
-        let res = '<a href="GiangVien"><li>XEM HỒ SƠ GIẢNG VIÊN</li></a><a href=""><li>THÊM GIẢNG VIÊN</li></a>';
+        let res = '<a href="GiangVien"><li>XEM HỒ SƠ GIẢNG VIÊN</li></a><a href="GiangVien/ThemGiangVien"><li>THÊM GIẢNG VIÊN</li></a>';
         menuChildGiangVien.innerHTML = res;
+        //lam moi menu
+    });
+    const btnNguoiDung = document.getElementById("btnNguoidung");
+    const menuChildnguoidung = document.getElementById("menu-child-nguoidung");
+    btnNguoiDung.addEventListener('click', function() {
+        let res = '<a href="NguoiDung"><li>QUẢN TRỊ</li></a><a href="NguoiDung/XemUserGiangVien"><li>GIẢNG VIÊN</li></a><a href="NguoiDung/XemUserSinhVien"><li>SINH VIÊN</li></a>';
+        menuChildnguoidung.innerHTML = res;
         //lam moi menu
     });
 })();

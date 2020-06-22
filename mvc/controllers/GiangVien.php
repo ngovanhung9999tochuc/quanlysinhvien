@@ -42,4 +42,23 @@ class GiangVien extends Controller
         $arrGiangVien = $daoGiangVien->layGiangVienTheoMaGV($magv);
         $this->view("LayoutQuanTri", ["page" => "GVSua", "css" => "GVSua", "arrGiangVien" => $arrGiangVien, "res" => $res]);
     }
+
+    public function ThemGiangVien()
+    {
+        $daoGiangVien = $this->model("DaoGiangVien");
+        $magv = "GV" . $this->randomString(8);
+        $res = "";
+        $arrPost=$_POST;
+        if (isset($_POST['them'])) {
+            if (isset($_POST['tengv']) && isset($_POST['ngaysinh']) && isset($_POST['gioitinh']) && isset($_POST['quequan']) && isset($_POST['hocvi']) && isset($_POST['makhoa'])) {
+                if ($daoGiangVien->themGiangVien($magv, $_POST['tengv'], $_POST['ngaysinh'], $_POST['gioitinh'], $_POST['quequan'], $_POST['hocvi'], $_POST['makhoa'])) {
+                    $res = "Thêm giảng viên thành công";
+                    $arrPost=[];
+                } else {
+                    $res = "Lỗi ! bạn nên kiểm tra mã khoa";
+                }
+            }
+        }
+        $this->view("LayoutQuanTri", ["page" => "GVThem", "css" => "GVThem", "arrPost" => $arrPost, "res" => $res]);
+    }
 }

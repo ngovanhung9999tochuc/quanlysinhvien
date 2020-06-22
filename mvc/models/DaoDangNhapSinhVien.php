@@ -32,4 +32,60 @@ class DaoDangNhapSinhVien extends DB
             return false;
         }
     }
+
+    public function layDanhSachUserSinhVienVaTenNguoiDung()
+    {
+        $array = [];
+        $sql = "SELECT UQL.tentaikhoan,UQL.matkhau,UQL.masv,SV.tensv FROM usersinhvien AS UQL JOIN sinhvien AS SV ON UQL.masv=SV.masv";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+    public function xoaUserSinhVienTheoTenTaiKhoa($tentaikhoan)
+    {
+        $sql = "DELETE FROM usersinhvien WHERE tentaikhoan='" . $tentaikhoan . "'";
+        if (mysqli_query($this->conn, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function LayUserSinhVienTheoTenTaiKhoan($tentaikhoan)
+    {
+        $array = [];
+        $sql = "SELECT * FROM usersinhvien WHERE tentaikhoan='$tentaikhoan'";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+    public function suaUserSinhVienTheoTenTaiKhoan($tentaikhoan, $matkhau)
+    {
+        $sql = "UPDATE usersinhvien SET matkhau='$matkhau' WHERE tentaikhoan ='$tentaikhoan'";
+        if (mysqli_query($this->conn, $sql)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function themUserSinhVien($tentaikhoan,$matkhau,$masv)
+    {
+        $sql = "INSERT INTO usersinhvien(tentaikhoan, matkhau, masv) VALUES ('$tentaikhoan','$matkhau','$masv')";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
