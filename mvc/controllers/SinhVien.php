@@ -78,4 +78,21 @@ class SinhVien extends Controller
         }
         $this->view("LayoutQuanTri", ["page" => "XemThemSV", "css" => "XemThemSV","res"=>$res,"arrPost"=>$arrPost]);
     }
+    public function SuaThongTinSinhVien($masv)
+    {
+        $daoSinhVien = $this->model("DaoSinhVien");
+        $res = "";
+        if (isset($_POST['sua'])) {
+            if (isset($_POST['masv']) && isset($_POST['tensv']) && isset($_POST['ngaysinh']) && isset($_POST['gioitinh']) && isset($_POST['quequan']) && isset($_POST['sdt']) && isset($_POST['malop'])) {
+                if ($daoSinhVien->suaSinhVien($_POST['masv'], $_POST['tensv'], $_POST['ngaysinh'], $_POST['gioitinh'], $_POST['quequan'], $_POST['sdt'], $_POST['malop'])) {
+                    header("Location: " . /*"http://localhost:8888/quanlysinhvien/"*/$this->getLocalhost() . "HeThongSinhVien/" . $_POST['masv'] . "");
+                } else {
+                    $res = "Lỗi ! bạn nên kiểm tra mã lớp";
+                }
+            }
+        }
+        $arrSinhVien = $daoSinhVien->laySinhVienTheoMaSV($masv);
+        $this->view("LayoutQuanTri", ["page" => "XemSuaSV", "css" => "XemSuaSV", "arrSinhVien" => $arrSinhVien, "res" => $res]);
+    }
+    
 }

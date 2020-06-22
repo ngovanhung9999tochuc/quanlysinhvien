@@ -10,7 +10,7 @@ class DaoDangNhapSinhVien extends DB
             if ($user == $row['tentaikhoan']) {
                 if ($pass == $row['matkhau']) {
                     $_SESSION['user'] = $user;
-                    $_SESSION['magv'] = $row['magv'];
+                    $_SESSION['masv'] = $row['masv'];
                     header("Location: ".$this->getLocalhost()."HeThongSinhVien");
                     break;
                 } else {

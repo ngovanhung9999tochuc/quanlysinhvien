@@ -1,0 +1,43 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content-main h3 {
+    background-color: rgb(172, 177, 182);
+}
+
+.content-main h2 {
+    margin: 1.5vw 0vw;
+    text-align: center;
+}
+
+.btn {
+    width: 25%;
+    height: 2vw;
+    background-color: #4CAF50;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: white;
+    border-color: #4CAF50;
+}

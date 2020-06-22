@@ -55,4 +55,16 @@ class DaoSinhVien extends DB
         }
         
     }
+    public function xemThongTinSinhVien($masv)
+    {
+        $array = [];
+        $sql = "SELECT SV.masv,SV.tensv,SV.ngaysinh,SV.gioitinh,SV.quequan,SV.sdt,L.tenlop,K.tenkhoa,N.tennganh,L.makhoahoc FROM 
+        sinhvien AS SV JOIN lop AS L ON SV.malop=L.malop JOIN khoa AS K ON L.makhoa=K.makhoa JOIN nganh AS N ON L.manganh=N.manganh
+        WHERE SV.masv='$masv'";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
 }
