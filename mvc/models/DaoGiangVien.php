@@ -43,4 +43,17 @@ class DaoGiangVien extends DB
             return false;
         }
     }
+
+    public function themGiangVien($magv,$tengv,$ngaysinh,$gioitinh,$quequan,$hocvi,$makhoa){
+        $sql = "INSERT INTO giangvien VALUES ('$magv','$tengv',$gioitinh,'$ngaysinh','$quequan','$hocvi','$makhoa')";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
