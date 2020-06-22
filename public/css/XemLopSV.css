@@ -1,0 +1,28 @@
+.content-main h3 {
+    background-color: rgb(172, 177, 182);
+}
+
+.content-main h2 {
+    margin: 1.5vw 0vw;
+    text-align: center;
+}
+
+.content-main ul li {
+    display: inline-block;
+    width: 15%;
+    background-color: royalblue;
+    height: 3vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+    border-radius: 5px;
+    margin-left: 1vw;
+    text-align: center;
+    line-height: 2.5em;
+    color: black;
+    border: 2px solid black;
+}
+
+.content-main ul li:hover {
+    background-color: white;
+    border-color: royalblue;
+}
