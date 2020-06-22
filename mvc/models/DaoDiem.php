@@ -29,4 +29,42 @@ class DaoDiem extends DB
             return false;
         }
     }
+
+    public function layDiemTheoMaDiem($madiem)
+    {
+        $array = [];
+        $sql = "SELECT * FROM diem WHERE madiem='".$madiem."'";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+    public function suaDiem($madiem,$diemchuyencan,$diemgiuaky,$diemcuoiky,$diemtongket){
+        $sql = "UPDATE diem SET diemchuyencan=$diemchuyencan,diemgiuaky=$diemgiuaky,diemcuoiky=$diemcuoiky,diemtongket=$diemtongket WHERE madiem='$madiem'";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function themDiem($madiem,$mamon,$masv,$diemchuyencan,$diemgiuaky,$diemcuoiky,$diemtongket){
+        $sql = "INSERT INTO diem(madiem, mamon, masv, diemchuyencan, diemgiuaky, diemcuoiky, diemtongket) VALUES ('$madiem','$mamon','$masv',$diemchuyencan,$diemgiuaky,$diemcuoiky,$diemtongket)";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+        
+    }
 }

@@ -29,7 +29,7 @@
     const btnDiem = document.getElementById("btnDiem");
     const menuChildDiem = document.getElementById("menu-child-diem");
     btnDiem.addEventListener('click', function() {
-        let res = '<a href="Diem"><li>XEM ĐIỂM</li></a><a href=""><li>THÊM ĐIỂM</li></a>';
+        let res = '<a href="Diem"><li>XEM ĐIỂM</li></a><a href="Diem/ThemDiem"><li>THÊM ĐIỂM</li></a>';
         menuChildDiem.innerHTML = res;
         //lam moi menu
     });
