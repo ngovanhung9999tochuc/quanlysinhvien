@@ -27,4 +27,12 @@ class Diem extends Controller
         $arrDiem= $daoDiem->layDiemTheoMaSV($masv);
         $this->view("LayoutQuanTri", ["page" => "DiemXemDanhSachDiem", "css" => "XemDanhSachSV", "arrDiem" => $arrDiem]);
     }
+
+    public function XoaDiem($madiem,$masv)
+    {
+        $daoDiem = $this->model("DaoDiem");
+        if ($daoDiem->xoaDiem($madiem)) {
+            header("Location: " . $this->getLocalhost() . "Diem/XemDiem/" . $masv . "");
+        }
+    }
 }
