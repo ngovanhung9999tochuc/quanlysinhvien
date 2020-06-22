@@ -56,11 +56,11 @@
 
 
     </table>
-    <table>
+    
         <?php
-        echo '</br><a href="SinhVien/SuaThongTinSinhVien/' . $data["arrSinhVien"][0]["masv"] . '" ><button class="btn">Sửa</button></a>'
+        echo '</br><a href="SinhVien/SuaThongTinSinhVien/' . $data["arrSinhVien"][0]["masv"] . '" ><button id="btnsua">Sửa</button></a>'
         ?>
-    </table>
+    
 
 
 </div>

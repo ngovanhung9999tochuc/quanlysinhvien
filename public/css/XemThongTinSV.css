@@ -29,8 +29,9 @@
     text-align: center;
 }
 
-.btn {
-    width: 25%;
+#btnsua {
+    text-align: center;
+    width: 10%;
     height: 2vw;
     background-color: #4CAF50;
     border: 1px solid black;
