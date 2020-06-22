@@ -95,4 +95,5 @@ class SinhVien extends Controller
         $this->view("LayoutSinhVien", ["page" => "XemSuaSV", "css" => "XemSuaSV", "arrSinhVien" => $arrSinhVien, "res" => $res]);
     }
     
+    
 }

@@ -33,7 +33,7 @@
                                 <span>THÔNG TIN SINH VIÊN</span>
                             </li>
                         </a>
-                        <a href="DiemSinhVien">
+                        <a href="HeThongDiemSinhVien">
                             <li id="btnDiem">
                                 <span>ĐIỂM</span>
                             </li>
@@ -50,7 +50,7 @@
                                 THÔNG TIN SINH VIÊN
                             </li>
                         </a>
-                        <a href="">
+                        <a href="HeThongDiemSinhVien">
                         <li class="bar">
                             ĐIỂM
                         </li>
