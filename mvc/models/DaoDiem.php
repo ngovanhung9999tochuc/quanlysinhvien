@@ -9,4 +9,15 @@ class DaoDiem extends DB
             return false;
         }
     }
+
+    public function layDiemTheoMaSV($masv)
+    {
+        $array = [];
+        $sql = "SELECT D.masv,D.mamon,M.tenmon,M.sotinchi,M.sotiet,D.diemchuyencan,D.diemgiuaky,D.diemcuoiky,D.diemtongket FROM diem AS D JOIN mon AS M ON D.mamon=M.mamon WHERE D.masv='$masv'";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
 }

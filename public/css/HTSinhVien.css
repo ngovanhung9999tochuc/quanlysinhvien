@@ -70,23 +70,23 @@ header .user .user-icon {
 
 /*menu chinh*/
 
-.content .nav-admin .nav-menu>li {
+.content .nav-admin .nav-menu a>li {
     font-size: 1.1em;
     font-weight: bold;
     height: 4vw;
     line-height: 2.5em;
 }
 
-.content .nav-admin .nav-menu>li>span {
+.content .nav-admin .nav-menu a>li>span {
     margin-left: 1vw;
     color: white;
 }
 
-.content .nav-admin .nav-menu>li:hover {
+.content .nav-admin .nav-menu a>li:hover {
     background-color: black;
 }
 
-.content .nav-admin .nav-menu>.menu-child {
+.content .nav-admin .nav-menu a>.menu-child {
     background-color: white;
 }
 
