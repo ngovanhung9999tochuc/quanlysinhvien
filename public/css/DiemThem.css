@@ -1,0 +1,83 @@
+.content-main h3 {
+    background-color: rgb(172, 177, 182);
+}
+
+.content-main h2 {
+    margin: 1.5vw 0vw;
+    text-align: center;
+}
+
+.content-main #formSV {
+    margin-bottom: 30px;
+    width: 60%;
+    margin: auto;
+}
+
+.content-main #formSV .row {
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+.content-main #formSV .row input[type="text"] {
+    float: right;
+    margin-right: 140px;
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.content-main #formSV .row input[type="number"] {
+    float: right;
+    margin-right: 140px;
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.content-main #formSV .row input[type="date"] {
+    float: right;
+    margin-right: 140px;
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.content-main #formSV .row .lb {
+    float: left;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content-main #formSV .row input[type="submit"] {
+    margin-top: 10px;
+    margin-left: 35%;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid rgb(239, 247, 220);
+    background-color: rgb(99, 219, 228);
+    font-size: 16px;
+}
+
+.content-main #formSV .row input[type="submit"]:hover {
+    border-color: rgb(1, 126, 126);
+    background-color: rgb(239, 247, 220);
+}
+
+.content-main #formSV .rowradio {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content-main #formSV .rowradio label {
+    padding: 0px 10px;
+}
+
+#res {
+    margin-top: 35px;
+    text-align: center;
+    font-weight: bold;
+}

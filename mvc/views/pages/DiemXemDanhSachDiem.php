@@ -26,8 +26,8 @@
             <td>'.$data["arrDiem"][$i]["diemcuoiky"].'</td>
             <td>'.$data["arrDiem"][$i]["diemtongket"].'</td>
             <td>
-            <a href="" ><button class="btn">Xóa</button></a>
-            <a href="" ><button class="btn">Sửa</button></a>
+            <a href="Diem/XoaDiem/'.$data["arrDiem"][$i]["madiem"].'/'.$data["arrDiem"][$i]["masv"].'" ><button class="btn">Xóa</button></a>
+            <a href="Diem/SuaDiem/'.$data["arrDiem"][$i]["madiem"].'/'.$data["arrDiem"][$i]["masv"].'" ><button class="btn">Sửa</button></a>
             </td>
         </tr>';
         }

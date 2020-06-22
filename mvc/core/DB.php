@@ -16,6 +16,8 @@ class DB
      public function getLocalhost()
     {
        //return "http://localhost:8888/quanlysinhvien/";
+
          return "http://localhost/quanlysinhvien/";
+
     }
 }
