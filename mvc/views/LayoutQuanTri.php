@@ -46,7 +46,8 @@
                         <li id="btnDiem">
                             <span>ĐIỂM</span>
                         </li>
-
+                        <ul class="menu-child" id="menu-child-diem">
+                        </ul>
                     </ul>
                 </nav>
             </div>
@@ -69,9 +70,11 @@
                                 HỒ SƠ SINH VIÊN
                             </li>
                         </a>
-                        <li class="bar">
-                            ĐIỂM
-                        </li>
+                        <a href="Diem">
+                            <li id="li-cuoi" class="bar">
+                                ĐIỂM
+                            </li>
+                        </a>
                     </ul>
                 </div>
                 <?php require_once "./mvc/views/pages/" . $data["page"] . ".php"; ?>

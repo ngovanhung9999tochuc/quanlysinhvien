@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <base href="http://localhost/quanlysinhvien/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="public/css/QuanTri.css" rel="stylesheet" type="text/css" />
+    <link href="public/css/HTSinhVien.css" rel="stylesheet" type="text/css" />
     <link href="public/css/<?php echo $data["css"] ?>.css" rel="stylesheet" type="text/css" />
     <script>
         if (window.history.replaceState) {
@@ -30,7 +30,7 @@
                     <ul class="nav-menu">
                         <a href="HeThongSinhVien">
                             <li id="btnNguoidung">
-                                <span>HỒ SƠ SINH VIÊN</span>
+                                <span>THÔNG TIN SINH VIÊN</span>
                             </li>
                         </a>
                         <a href="DiemSinhVien">
@@ -45,12 +45,16 @@
                 <h3 style="background-color: rgb(172, 177, 182);">Quản Trị</h3>
                 <div class="transfer-bar-nav clearfix">
                     <ul>
-                        <li class="bar">
-                            HỒ SƠ NGƯỜI DÙNG
-                        </li>
+                        <a href="HeThongSinhVien">
+                            <li class="bar">
+                                THÔNG TIN SINH VIÊN
+                            </li>
+                        </a>
+                        <a href="">
                         <li class="bar">
                             ĐIỂM
                         </li>
+                        </a>
                     </ul>
                 </div>
                 <?php require_once "./mvc/views/pages/" . $data["page"] . ".php"; ?>
