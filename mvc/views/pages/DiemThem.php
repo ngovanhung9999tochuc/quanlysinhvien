@@ -3,8 +3,8 @@
     <h3>Thêm Điểm</h3>
     <form id="formSV" method="POST" action="">
         <div class="row">
-            <label for="mamon" class="lb">Mã Môn</label>
-            <input type="text" id="mamon" name="mamon" value="<?php if (!empty($data["arrPost"]["mamon"])) echo $data["arrPost"]["mamon"] ?>" required />
+            <label for="matochuday" class="lb">Mã Tổ Chức Dạy</label>
+            <input type="text" id="matochuday" name="matochuday" value="<?php if (!empty($data["arrPost"]["matochuday"])) echo $data["arrPost"]["matochuday"] ?>" required />
         </div>
         <div class="row">
             <label for="masv" class="lb">Mã Sinh Viên</label>
@@ -23,7 +23,7 @@
             <input type="number" id="diemcuoiky" name="diemcuoiky" value="<?php if (!empty($data["arrPost"]["diemcuoiky"])) echo $data["arrPost"]["diemcuoiky"] ?>" required />
         </div>
         <div class="row">
-            <label for="diemtongket" class="lb">Mã Lớp</label>
+            <label for="diemtongket" class="lb">Điểm Tổng Kết</label>
             <input type="number" id="diemtongket" name="diemtongket" value="<?php if (!empty($data["arrPost"]["diemtongket"])) echo $data["arrPost"]["diemtongket"] ?>" required />
         </div>
         <div class="row">

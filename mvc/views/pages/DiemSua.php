@@ -3,8 +3,12 @@
     <h3>Sửa Điểm</h3>
     <form id="formSV" method="POST" action="">
         <div class="row">
-            <label for="madiem" class="lb">Mã Điểm</label>
-            <input type="text" id="madiem" name="madiem" value="<?php echo $data["arrDiem"][0]["madiem"] ?>" readonly />
+            <label for="matochuday" class="lb">Mã Lớp Tín Chỉ</label>
+            <input type="text" id="matochuday" name="matochuday" value="<?php echo $data["arrDiem"][0]["matochuday"] ?>" readonly />
+        </div>
+        <div class="row">
+            <label for="masv" class="lb">Mã Sinh Viên</label>
+            <input type="text" id="masv" name="masv" value="<?php echo $data["arrDiem"][0]["masv"] ?>" readonly />
         </div>
         <div class="row">
             <label for="diemchuyencan" class="lb">Điểm Chuyên Cần</label>
