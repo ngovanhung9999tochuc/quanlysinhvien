@@ -56,7 +56,6 @@ class DaoGiangVien extends DB
             return false;
         }
     }
-
     public function xemThongTinGiangVien($magv)
     {
         $array = [];

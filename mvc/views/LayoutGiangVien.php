@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +8,13 @@
     <meta charset="UTF-8">
     <base href="http://localhost/quanlysinhvien/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="public/css/QuanTri.css" rel="stylesheet" type="text/css" />
+    <link href="public/css/HTSinhVien.css" rel="stylesheet" type="text/css" />
     <link href="public/css/<?php echo $data["css"] ?>.css" rel="stylesheet" type="text/css" />
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
         }
     </script>
-
     <title>Quản Trị</title>
 </head>
 
@@ -20,7 +22,7 @@
     <div>
         <div class="main">
             <header class="clearfix">
-                <a href="HeThongQuanTri">
+                <a href="HeThongGiangVien">
                     <h2 class="title-page">Hệ Thống Quản Lý</h2>
                 </a>
                 <span class="user"><b class="user-icon"><?php
@@ -36,26 +38,12 @@
             <div class="nav-admin">
                 <nav>
                     <ul class="nav-menu">
-                        <li id="btnNguoidung">
-                            <span>HỒ SƠ NGƯỜI DÙNG</span>
-                        </li>
-                        <ul class="menu-child" id="menu-child-nguoidung">
-                        </ul>
-                        <li id="btnGiangVien">
-                            <span>HỒ SƠ GIẢNG VIÊN</span>
-                        </li>
-                        <ul class="menu-child" id="menu-child-giangvien">
-                        </ul>
-                        <li id="btnSinhVien">
-                            <span>HỒ SƠ SINH VIÊN</span>
-                        </li>
-                        <ul class="menu-child" id="menu-child-sinhvien">
-                        </ul>
-                        <li id="btnDiem">
-                            <span>ĐIỂM</span>
-                        </li>
-                        <ul class="menu-child" id="menu-child-diem">
-                        </ul>
+                        <a href="HeThongGiangVien">
+                            <li id="btnNguoidung">
+                                <span>THÔNG TIN GIẢNG VIÊN</span>
+                            </li>
+                        </a>
+
                     </ul>
                 </nav>
             </div>
@@ -63,24 +51,9 @@
                 <h3 style="background-color: rgb(172, 177, 182);">Quản Trị</h3>
                 <div class="transfer-bar-nav clearfix">
                     <ul>
-                        <a href="NguoiDung">
+                        <a href="HeThongGiangVien">
                             <li class="bar">
-                                HỒ SƠ NGƯỜI DÙNG
-                            </li>
-                        </a>
-                        <a href="GiangVien">
-                            <li class="bar">
-                                HỒ SƠ GIẢNG VIÊN
-                            </li>
-                        </a>
-                        <a href="SinhVien">
-                            <li class="bar">
-                                HỒ SƠ SINH VIÊN
-                            </li>
-                        </a>
-                        <a href="Diem">
-                            <li id="li-cuoi" class="bar">
-                                ĐIỂM
+                                THÔNG TIN GIẢNG VIÊN
                             </li>
                         </a>
                     </ul>

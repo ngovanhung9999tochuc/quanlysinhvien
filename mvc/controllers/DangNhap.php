@@ -92,4 +92,9 @@ class DangNhap extends Controller
         }
       $this->view("LayoutDangNhap", ["page" => "DangNhap","res"=>$result,"reserror"=>$resError,"user"=>$user]);
    }
+
+   public function Thoat(){
+      unset( $_SESSION['user']);
+      header("Location: ".$this->getLocalhost()."");
+   }
 }
