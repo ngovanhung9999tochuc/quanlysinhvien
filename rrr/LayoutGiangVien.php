@@ -1,3 +1,6 @@
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,28 +22,21 @@
     <div>
         <div class="main">
             <header class="clearfix">
-                <a href="HeThongSinhVien">
+                <a href="HeThongQuanTri">
                     <h2 class="title-page">Hệ Thống Quản Lý</h2>
-                </a> 
-                <span class="user"><b class="user-icon"><?php
-                    if(!empty($_SESSION['user'])){
-                        echo $_SESSION['user'];
-                    }else{
-                        header("Location: ".$this->getLocalhost()."");
-                    }
-                ?></b><b class="name-user"><a href="DangNhap/Thoat">Thoát</a></b></span>
+                </a> <span class="user"><b class="user-icon">@</b><b class="name-user">ngô văn hùng</b></span>
             </header>
         </div>
         <section class="content clearfix">
             <div class="nav-admin">
                 <nav>
                     <ul class="nav-menu">
-                        <a href="HeThongSinhVien">
+                        <a href="HeThongGiangVien">
                             <li id="btnNguoidung">
-                                <span>THÔNG TIN SINH VIÊN</span>
+                                <span>THÔNG TIN Giảng Viên</span>
                             </li>
                         </a>
-                        <a href="HeThongDiemSinhVien">
+                        <a href="DiemSinhVien">
                             <li id="btnDiem">
                                 <span>ĐIỂM</span>
                             </li>
@@ -52,12 +48,12 @@
                 <h3 style="background-color: rgb(172, 177, 182);">Quản Trị</h3>
                 <div class="transfer-bar-nav clearfix">
                     <ul>
-                        <a href="HeThongSinhVien">
+                        <a href="HeThongGiangVien">
                             <li class="bar">
-                                THÔNG TIN SINH VIÊN
+                                THÔNG TIN Giảng Viên
                             </li>
                         </a>
-                        <a href="HeThongDiemSinhVien">
+                        <a href="">
                         <li class="bar">
                             ĐIỂM
                         </li>
