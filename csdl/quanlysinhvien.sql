@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 25, 2020 lúc 09:47 AM
+-- Thời gian đã tạo: Th6 26, 2020 lúc 08:02 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -33,6 +33,20 @@ CREATE TABLE `dangky` (
   `xacnhanhoc` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `dangky`
+--
+
+INSERT INTO `dangky` (`matochuday`, `masv`, `xacnhanhoc`) VALUES
+('TCD001', 'SV001', b'1'),
+('TCD001', 'SV002', b'1'),
+('TCD001', 'SV39871025', b'1'),
+('TCD001', 'SV45793180', b'1'),
+('TCD002', 'SV001', b'1'),
+('TCD002', 'SV002', b'1'),
+('TCD002', 'SV39871025', b'1'),
+('TCD002', 'SV45793180', b'1');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +61,20 @@ CREATE TABLE `diem` (
   `diemcuoiky` float DEFAULT NULL,
   `diemtongket` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `diem`
+--
+
+INSERT INTO `diem` (`matochuday`, `masv`, `diemchuyencan`, `diemgiuaky`, `diemcuoiky`, `diemtongket`) VALUES
+('TCD001', 'SV001', 4, 4, 4, 4),
+('TCD001', 'SV002', 8, 8, 8, 8),
+('TCD001', 'SV39871025', 9, 9, 9, 9),
+('TCD001', 'SV45793180', 8, 8, 8, 8),
+('TCD002', 'SV001', 9, 9, 9, 9),
+('TCD002', 'SV002', 7, 7, 7, 7),
+('TCD002', 'SV39871025', 6, 6, 6, 6),
+('TCD002', 'SV45793180', 6, 6, 6, 6);
 
 -- --------------------------------------------------------
 
@@ -69,9 +97,9 @@ CREATE TABLE `giangvien` (
 --
 
 INSERT INTO `giangvien` (`magv`, `tengv`, `gioitinh`, `ngaysinh`, `quequan`, `hocvi`, `makhoa`) VALUES
-('2', 'phan an', b'0', '2020-06-02', 'quảng nam', 'tiến sĩ', 'mk001'),
 ('gv001', 'Trần Linh', b'0', '2017-11-03', 'Đà Nẵng', 'Đại Học', 'mk001'),
-('gv002', 'Tràn Anh', b'1', '2017-06-02', 'Đà Nẵng', 'Tiến Sĩ', 'mk002');
+('gv002', 'Tràn Anh', b'1', '2017-06-02', 'Đà Nẵng', 'Tiến Sĩ', 'mk001'),
+('gv003', 'phan thị liễu', b'0', '1999-06-02', 'quảng nam', 'tiến sĩ', 'mk001');
 
 -- --------------------------------------------------------
 
@@ -163,6 +191,17 @@ CREATE TABLE `loptinchi` (
   `mamon` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `loptinchi`
+--
+
+INSERT INTO `loptinchi` (`maltc`, `magv`, `mamon`) VALUES
+('LTC001', 'gv001', 'mm002'),
+('LTC002', 'gv002', 'mm003'),
+('LTC003', 'gv001', 'mm004'),
+('LTC004', 'gv002', 'mm005'),
+('LTC35187069', 'GV002', 'mm002');
+
 -- --------------------------------------------------------
 
 --
@@ -183,7 +222,10 @@ CREATE TABLE `mon` (
 
 INSERT INTO `mon` (`mamon`, `tenmon`, `sotinchi`, `sotiet`, `makhoa`) VALUES
 ('mm001', 'Quản Lý Web', 2, 60, 'mk001'),
-('mm002', 'Lắp Ráp ô tô', 3, 90, 'mk002');
+('mm002', 'Lập Trình Cơ Bản', 3, 90, 'mk001'),
+('mm003', 'Lập Trình Hướng Đối Tượng', 3, 90, 'mk001'),
+('mm004', 'Lập Trình Website', 2, 60, 'mk001'),
+('mm005', 'Cơ Sở Dữ Liệu', 3, 90, 'mk001');
 
 -- --------------------------------------------------------
 
@@ -215,6 +257,21 @@ CREATE TABLE `phonghoc` (
   `tenphonghoc` varchar(50) DEFAULT NULL,
   `makhoa` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `phonghoc`
+--
+
+INSERT INTO `phonghoc` (`maphonghoc`, `tenphonghoc`, `makhoa`) VALUES
+('A101', 'A101', 'mk001'),
+('A102', 'A102', 'mk001'),
+('A103', 'A103', 'mk001'),
+('A201', 'A201', 'mk001'),
+('A202', 'A202', 'mk001'),
+('A203', 'A203', 'mk001'),
+('A301', 'A301', 'mk001'),
+('A302', 'A302', 'mk001'),
+('A303', 'A303', 'mk001');
 
 -- --------------------------------------------------------
 
@@ -254,8 +311,18 @@ CREATE TABLE `tochuday` (
   `soluongsv` int(11) NOT NULL,
   `maphonghoc` varchar(20) DEFAULT NULL,
   `ngaybatdau` date DEFAULT NULL,
-  `ngayketthuc` date DEFAULT NULL
+  `ngayketthuc` date DEFAULT NULL,
+  `xacnhanday` bit(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `tochuday`
+--
+
+INSERT INTO `tochuday` (`matochuday`, `maltc`, `soluongsv`, `maphonghoc`, `ngaybatdau`, `ngayketthuc`, `xacnhanday`) VALUES
+('TCD001', 'LTC001', 30, 'A101', '2020-06-01', '2020-07-30', b'10'),
+('TCD002', 'LTC002', 20, 'A102', '2020-06-17', '2020-08-30', b'01'),
+('TCD003', 'LTC35187069', 50, 'A201', '2020-06-01', '2020-06-30', b'00');
 
 -- --------------------------------------------------------
 
@@ -274,7 +341,6 @@ CREATE TABLE `usergiangvien` (
 --
 
 INSERT INTO `usergiangvien` (`tentaikhoan`, `matkhau`, `magv`) VALUES
-('2', '2', '2'),
 ('trananh', '1234', 'gv002'),
 ('tranlinh', '1234', 'gv001');
 
@@ -295,7 +361,6 @@ CREATE TABLE `userquanly` (
 --
 
 INSERT INTO `userquanly` (`tentaikhoan`, `matkhau`, `magv`) VALUES
-('2', '2', '2'),
 ('trananhql', '1234', 'gv002'),
 ('tranlinhql', '1234', 'gv001');
 
