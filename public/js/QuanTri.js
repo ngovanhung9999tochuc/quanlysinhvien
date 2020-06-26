@@ -36,7 +36,7 @@
     const btnToChuLichDay = document.getElementById("btnToChuLichDay");
     const menuChildToChuDay = document.getElementById("menu-child-tochuday");
     btnToChuLichDay.addEventListener('click', function() {
-        let res = '<a href=""><li>XEM LỊCH DẠY</li></a><a href=""><li>THÊM LỊCH DẠY</li></a>';
+        let res = '<a href="ToChuDay"><li>XEM LỊCH DẠY</li></a><a href="ToChuDay/ThemToChuDay"><li>THÊM LỊCH DẠY</li></a>';
         menuChildToChuDay.innerHTML = res;
         //lam moi menu
     });
