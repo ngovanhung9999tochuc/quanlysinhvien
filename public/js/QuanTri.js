@@ -33,4 +33,19 @@
         menuChildDiem.innerHTML = res;
         //lam moi menu
     });
+    const btnToChuLichDay = document.getElementById("btnToChuLichDay");
+    const menuChildToChuDay = document.getElementById("menu-child-tochuday");
+    btnToChuLichDay.addEventListener('click', function() {
+        let res = '<a href=""><li>XEM LỊCH DẠY</li></a><a href=""><li>THÊM LỊCH DẠY</li></a>';
+        menuChildToChuDay.innerHTML = res;
+        //lam moi menu
+    });
+
+    const btnLopTinChi = document.getElementById("btnLopTinChi");
+    const menuChildLopTinChi = document.getElementById("menu-child-loptinchi");
+    btnLopTinChi.addEventListener('click', function() {
+        let res = '<a href="LopTinChi"><li>XEM LỚP TÍN CHỈ</li></a><a href=""><li>THÊM LỚP TÍN CHỈ</li></a>';
+        menuChildLopTinChi.innerHTML = res;
+        //lam moi menu
+    });
 })();

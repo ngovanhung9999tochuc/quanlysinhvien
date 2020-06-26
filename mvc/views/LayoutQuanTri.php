@@ -56,6 +56,16 @@
                         </li>
                         <ul class="menu-child" id="menu-child-diem">
                         </ul>
+                        <li id="btnToChuLichDay">
+                            <span>TỔ CHỨC LỊCH DẠY</span>
+                        </li>
+                        <ul class="menu-child" id="menu-child-tochuday">
+                        </ul>
+                        <li id="btnLopTinChi">
+                            <span>LỚP TÍN CHỈ</span>
+                        </li>
+                        <ul class="menu-child" id="menu-child-loptinchi">
+                        </ul>
                     </ul>
                 </nav>
             </div>
