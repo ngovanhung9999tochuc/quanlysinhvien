@@ -22,8 +22,8 @@
             <td>'.$data["arrLopTinChi"][$i]["sotiet"].'</td>
             <td>'.$data["arrLopTinChi"][$i]["tenkhoa"].'</td>
             <td>
-            <a href="LopTinChi/XoaDiem/'.$data["arrLopTinChi"][$i]["maltc"].'" ><button class="btn">Xóa</button></a>
-            <a href="" ><button class="btn">Sửa</button></a>
+            <a href="LopTinChi/XoaLopTinChi/'.$data["arrLopTinChi"][$i]["maltc"].'" ><button class="btn">Xóa</button></a>
+            <a href="LopTinChi/SuaLopTinChi/'.$data["arrLopTinChi"][$i]["maltc"].'" ><button class="btn">Sửa</button></a>
             </td>
         </tr>';
         }

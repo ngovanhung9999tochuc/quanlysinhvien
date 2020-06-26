@@ -21,4 +21,43 @@ class DaoLopTinChi extends DB
             return false;
         }
     }
+
+    public function layLopTinChiTheoMa($maltc)
+    {
+        $array = [];
+        $sql = "SELECT * FROM loptinchi WHERE maltc='$maltc'";
+        $result = mysqli_query($this->conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+    public function suaLopTinChi($maltc, $magv, $mamon)
+    {
+        $sql = "UPDATE loptinchi SET magv='$magv',mamon='$mamon' WHERE maltc='$maltc'";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function themLopTinChi($maltc, $magv, $mamon)
+    {
+        $sql = "INSERT INTO loptinchi(maltc, magv, mamon) VALUES ('$maltc','$magv','$mamon')";
+        try {
+            if (mysqli_query($this->conn, $sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }

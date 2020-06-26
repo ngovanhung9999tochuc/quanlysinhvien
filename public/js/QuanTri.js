@@ -44,7 +44,7 @@
     const btnLopTinChi = document.getElementById("btnLopTinChi");
     const menuChildLopTinChi = document.getElementById("menu-child-loptinchi");
     btnLopTinChi.addEventListener('click', function() {
-        let res = '<a href="LopTinChi"><li>XEM LỚP TÍN CHỈ</li></a><a href=""><li>THÊM LỚP TÍN CHỈ</li></a>';
+        let res = '<a href="LopTinChi"><li>XEM LỚP TÍN CHỈ</li></a><a href="LopTinChi/ThemLopTinChi"><li>THÊM LỚP TÍN CHỈ</li></a>';
         menuChildLopTinChi.innerHTML = res;
         //lam moi menu
     });
